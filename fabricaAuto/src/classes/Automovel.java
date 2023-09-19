@@ -45,15 +45,13 @@
             if (ligado == 0) { // validando estado
             ligado = 1;
                 System.out.println("Automóvel ligado.");
-            }
-
-            if (ligado == 1) {
+            } else if (ligado == 1) {
                 System.out.println("Automóvel já está ligado.");
             }
         } catch (Exception e) {
             System.out.println("Algo deu errado!!!");
         } finally {
-            System.out.println("Finalizado...");
+            System.out.println("Finalizado ligar...");
         }
     };
     // funcao para mover
@@ -71,7 +69,7 @@
         } catch (Exception e) {
             System.out.println("Algo deu errado!!!");
         } finally {
-            System.out.println("Finalizado...");
+            System.out.println("Finalizado mover...");
         }
     }
     // funcao para parar
@@ -89,7 +87,7 @@
         } catch (Exception e) {
             System.out.println("Algo deu errado!!!");
         } finally {
-            System.out.println("Finalizando...");
+            System.out.println("Finalizando parar...");
         }
     }
 

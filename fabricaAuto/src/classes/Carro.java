@@ -13,41 +13,50 @@ public class Carro extends Automovel {
     // metodo para entrada de dados
     Scanner entrada = new Scanner(System.in);
     // atributos/variaveis 0 - nao, 1 - sim
-    int tetoSolar = 0, aberto = 0;
+    private String aberto = "Fechado", tetoSolar;
+    private int aux;
     
-    public void setTeto(int tetoSolar) {
-        this.tetoSolar = tetoSolar;
+    public void setTeto(int aux) {
+        try {
+            if (aux == 0) {
+                this.tetoSolar = "Não";
+            }
+
+            if (aux == 1) {
+                this.tetoSolar = "Sim";
+            }
+
+        } catch (Exception e) {
+            System.out.println("Algo deu errado!!!");
+        } finally {
+            System.out.println("Finalizando teto...");
+        }
     }
 
-    public void getTeto(){
-        if (tetoSolar == 0) {
-            System.out.println("Não.");
-        }
-        
-        if (tetoSolar == 1) {
-            System.out.println("Sim.");
-        }
+    public String getTeto() {
+        return tetoSolar;
     }
 
     public void setAbrirFechar() {
         // tratativa de erros
         try{
-            if (aberto == 0) { //verificando estado
-                aberto = 1;
+            if (aberto == "Fechado") { //verificando estado
+                this.aberto = "Aberto";
                 System.out.println("Carro aberto.");
-            }
-
-            if (aberto == 1) {
-                aberto = 0;
-                System.out.println("Carro fechado.")
+            } else if (aberto == "Aberto") {
+                this.aberto = "Fechado";
+                System.out.println("Carro fechado.");
             }
         } catch (Exception e) {
             System.out.println("Algo deu errado!!!");
         }finally{
-            System.out.println("Finalizando...");
+            System.out.println("Finalizando abrirFechar...");
         }
     }
-    
-//TODO: verificar se está funcionando os metodos, avaliar se precisa de entrada manual(provavelmente)
+
+    public String getAbrirFechar() {
+        // tratativa de erros
+        return aberto;
+    }
 
 }

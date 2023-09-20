@@ -37,5 +37,8 @@ public class App {
         carro.setParar();
         System.out.println("movendo: " + carro.getMover());
 
+        Moto moto = new Moto();
+//TODO: colocar para testar os atributos herdados em Moto
+        moto.setAlarme();
     }
 }

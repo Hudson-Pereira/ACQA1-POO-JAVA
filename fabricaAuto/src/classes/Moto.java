@@ -7,7 +7,7 @@
  *
  * @author hudson
  */
-public class Moto {
+public class Moto extends Automovel {
 
     public void setAlarme() {
         try {

@@ -14,15 +14,16 @@ public class Carro extends Automovel {
     Scanner entrada = new Scanner(System.in);
     // atributos/variaveis 0 - nao, 1 - sim
     private String aberto = "Não", tetoSolar;
-    private int aux;
+    private int aux, aux2;
     
     public void setTeto(int aux) {
+        this.aux2 = aux;
         try {
-            if (aux == 0) {
+            if (aux2 == 0) {
                 this.tetoSolar = "Não";
             }
 
-            if (aux == 1) {
+            if (aux2 == 1) {
                 this.tetoSolar = "Sim";
             }
 
